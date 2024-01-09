@@ -1,6 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 
-import 'package:bmi_calculator/constansts.dart';
+import 'package:bmi_calculator/core/colors/app_color.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
@@ -19,7 +19,7 @@ class CustomButton extends StatelessWidget {
       onPressed: onTap,
       minWidth: double.infinity,
       height: 50,
-      color: redColor,
+      color: AppColors.redColor,
       child: Text(
         label,
         style: const TextStyle(fontSize: 15),

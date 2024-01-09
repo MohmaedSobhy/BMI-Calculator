@@ -1,7 +1,6 @@
+import 'package:bmi_calculator/core/colors/app_color.dart';
 import 'package:bmi_calculator/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
-
-import '../../../constansts.dart';
 
 class ResultScreen extends StatelessWidget {
   const ResultScreen(
@@ -33,7 +32,7 @@ class ResultScreen extends StatelessWidget {
               "Your Result ",
               textAlign: TextAlign.center,
               style: TextStyle(
-                color: redColor,
+                color: AppColors.redColor,
                 fontSize: 30.0,
               ),
             )),
@@ -43,7 +42,7 @@ class ResultScreen extends StatelessWidget {
                   padding: const EdgeInsets.only(bottom: 30),
                   child: Container(
                     decoration: BoxDecoration(
-                      color: activeCardColour,
+                      color: AppColors.activeCardColour,
                       borderRadius: BorderRadius.circular(10.0),
                     ),
                     child: Column(

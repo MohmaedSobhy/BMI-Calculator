@@ -1,7 +1,6 @@
+import 'package:bmi_calculator/core/colors/app_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../constansts.dart';
-
 import '../controller/app_cubit.dart';
 import '../controller/app_state.dart';
 import '../model/calculator_brain.dart';
@@ -35,8 +34,9 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     Expanded(
                         child: GenderCard(
-                      background:
-                          cubit.isMale ? activeCardColour : inActiveCardColour,
+                      background: cubit.isMale
+                          ? AppColors.activeCardColour
+                          : AppColors.inActiveCardColour,
                       label: "Male",
                       icon: Icons.male,
                       ontap: () {
@@ -45,8 +45,9 @@ class HomeScreen extends StatelessWidget {
                     )),
                     Expanded(
                         child: GenderCard(
-                      background:
-                          cubit.isMale ? inActiveCardColour : activeCardColour,
+                      background: cubit.isMale
+                          ? AppColors.inActiveCardColour
+                          : AppColors.activeCardColour,
                       label: "Female",
                       icon: Icons.female,
                       ontap: () {
@@ -61,7 +62,7 @@ class HomeScreen extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: Container(
                     decoration: BoxDecoration(
-                      color: inActiveCardColour,
+                      color: AppColors.activeCardColour,
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Column(
