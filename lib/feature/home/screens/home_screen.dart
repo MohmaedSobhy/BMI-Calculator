@@ -1,12 +1,12 @@
-import 'package:bmi/widgets/gender_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../constansts.dart';
-import '../controller/app_cubit.dart';
+import '../../../constansts.dart';
+import '../../controller/app_cubit.dart';
+import '../controller/app_state.dart';
 import '../model/calculator_brain.dart';
-import '../widgets/custom_button.dart';
-import '../widgets/custome_card.dart';
+import '../../../core/widgets/custom_button.dart';
+import '../../../core/widgets/custome_card.dart';
+import '../../../core/widgets/gender_card.dart';
 import 'result_screen.dart';
 
 // ignore: must_be_immutable

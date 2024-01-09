@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../constansts.dart';
+import '../../constansts.dart';
 
 // ignore: must_be_immutable
 class CustomeCard extends StatelessWidget {

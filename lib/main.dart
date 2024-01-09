@@ -1,8 +1,8 @@
-import 'package:bmi/controller/app_cubit.dart';
-import 'package:bmi/screens/home_screen.dart';
-
+import 'package:bmi_calculator/feature/home/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'feature/controller/app_cubit.dart';
 
 void main() {
   runApp(MyApp());

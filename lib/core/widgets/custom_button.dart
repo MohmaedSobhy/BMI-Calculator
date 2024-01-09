@@ -1,5 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:bmi_app/constansts.dart';
+
+import 'package:bmi_calculator/constansts.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {

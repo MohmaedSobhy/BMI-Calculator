@@ -1,6 +1,7 @@
-import 'package:bmi_app/constansts.dart';
-import 'package:bmi_app/widgets/custom_button.dart';
+import 'package:bmi_calculator/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
+
+import '../../../constansts.dart';
 
 class ResultScreen extends StatelessWidget {
   const ResultScreen(
