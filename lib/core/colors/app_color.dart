@@ -5,4 +5,5 @@ abstract class AppColors {
   static const Color inActiveCardColour = Color(0xFF111328);
   static const Color redColor = Color(0xFFEB1555);
   static const Color grey = Color(0xFF8D8E98);
+  static const Color backGround = Color(0xFF0A0E21);
 }

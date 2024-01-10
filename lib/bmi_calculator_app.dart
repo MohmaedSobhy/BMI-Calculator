@@ -1,3 +1,4 @@
+import 'package:bmi_calculator/core/colors/app_color.dart';
 import 'package:bmi_calculator/feature/home/presentation/controller/app_cubit.dart';
 import 'package:bmi_calculator/feature/home/presentation/screens/home_screen.dart';
 import 'package:flutter/material.dart';
@@ -13,15 +14,15 @@ class BmiCalculator extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData.dark().copyWith(
-          primaryColor: const Color(0xFF0A0E21),
-          scaffoldBackgroundColor: const Color(0xFF0A0E21),
+          primaryColor: AppColors.backGround,
+          scaffoldBackgroundColor: AppColors.backGround,
           appBarTheme: const AppBarTheme(
             centerTitle: true,
             elevation: 3.0,
-            backgroundColor: const Color(0xFF111328),
+            backgroundColor: AppColors.backGround,
           ),
         ),
-        home: HomeScreen(),
+        home: const HomeScreen(),
       ),
     );
   }
