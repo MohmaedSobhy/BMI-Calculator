@@ -2,7 +2,6 @@ import 'package:bmi_calculator/feature/home/presentation/controller/app_state.da
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../core/widgets/custom_button.dart';
-import '../../data/model/calculator_brain.dart';
 import '../controller/app_cubit.dart';
 import '../screens/result_screen.dart';
 import 'gender_type_view.dart';
@@ -30,15 +29,9 @@ class HomeBodyView extends StatelessWidget {
             ),
             CustomButton(
               onTap: () {
-                CalculatorBrain calc =
-                    CalculatorBrain(height: cubit.height, weight: cubit.weight);
-
+                cubit.getCalculationResult();
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return ResultScreen(
-                    bmiResult: calc.calculateBMI(),
-                    resultText: calc.getResult(),
-                    interpretation: calc.getInterpretation(),
-                  );
+                  return const ResultScreen();
                 }));
               },
               label: "CALCULATE",

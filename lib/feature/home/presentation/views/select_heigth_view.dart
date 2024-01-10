@@ -20,31 +20,32 @@ class SelectHeightView extends StatelessWidget {
               color: AppColors.activeCardColour,
               borderRadius: BorderRadius.circular(10),
             ),
-            child:
-                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-              const Text(
-                "Height",
-                style: TextStyle(color: Colors.grey, fontSize: 28),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.baseline,
-                textBaseline: TextBaseline.alphabetic,
-                children: [
-                  Text(
-                    cubit.height.toString(),
-                    style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  const Text(
-                    "CM",
-                    style: TextStyle(color: Colors.grey),
-                  ),
-                ],
-              ),
-              SliderTheme(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text(
+                  "Height",
+                  style: TextStyle(color: Colors.grey, fontSize: 28),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.baseline,
+                  textBaseline: TextBaseline.alphabetic,
+                  children: [
+                    Text(
+                      cubit.height.toString(),
+                      style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    const Text(
+                      "CM",
+                      style: TextStyle(color: Colors.grey),
+                    ),
+                  ],
+                ),
+                SliderTheme(
                   data: const SliderThemeData(
                     inactiveTickMarkColor: Color(0xFF8D8E98),
                     activeTrackColor: Colors.white,
@@ -60,8 +61,10 @@ class SelectHeightView extends StatelessWidget {
                     },
                     min: 50,
                     max: 200,
-                  ))
-            ]),
+                  ),
+                )
+              ],
+            ),
           ),
         );
       },

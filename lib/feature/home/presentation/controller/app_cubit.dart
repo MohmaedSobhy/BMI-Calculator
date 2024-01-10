@@ -1,3 +1,4 @@
+import 'package:bmi_calculator/feature/home/data/model/calculator_brain.dart';
 import 'package:bmi_calculator/feature/home/presentation/controller/app_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -8,8 +9,21 @@ class AppCubit extends Cubit<AppState> {
   int height = 100;
   int age = 50;
   int weight = 50;
+
+  String bmiResult = "What time is it?";
+  String resultText = "What time is it?";
+  String interpretation = "What time is it?";
+
   static AppCubit get(context) {
     return BlocProvider.of(context);
+  }
+
+  void getCalculationResult() {
+    CalculatorBrain.height = height;
+    CalculatorBrain.weight = weight;
+    bmiResult = CalculatorBrain.calculateBMI();
+    resultText = CalculatorBrain.getResult();
+    interpretation = CalculatorBrain.getInterpretation();
   }
 
   void changeGender() {
