@@ -17,9 +17,6 @@ class ResultScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("BMI CALCULATOR"),
-        centerTitle: true,
-        elevation: 3.0,
-        backgroundColor: const Color(0xFF111328),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),

@@ -1,4 +1,4 @@
-import 'package:bmi_calculator/feature/home/controller/app_state.dart';
+import 'package:bmi_calculator/feature/home/presentation/controller/app_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AppCubit extends Cubit<AppState> {

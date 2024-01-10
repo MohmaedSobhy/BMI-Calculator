@@ -5,7 +5,6 @@ class CalculatorBrain {
 
   final int height;
   final int weight;
-
   double? _bmi;
 
   String calculateBMI() {
