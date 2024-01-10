@@ -12,9 +12,9 @@ class AppCubit extends Cubit<AppState> {
   int age = 50;
   int weight = 50;
 
-  String bmiResult = "What time is it?";
-  String resultText = "What time is it?";
-  String interpretation = "What time is it?";
+  String bmiResult = "";
+  String resultText = "";
+  String interpretation = "";
 
   static AppCubit getInstance() {
     appcubit ??= AppCubit._privateConstructor();
