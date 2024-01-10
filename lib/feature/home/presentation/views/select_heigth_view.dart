@@ -12,7 +12,6 @@ class SelectHeightView extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<AppCubit, AppState>(
       builder: (context, state) {
-        var cubit = AppCubit.get(context);
         return Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Container(
@@ -33,7 +32,7 @@ class SelectHeightView extends StatelessWidget {
                   textBaseline: TextBaseline.alphabetic,
                   children: [
                     Text(
-                      cubit.height.toString(),
+                      AppCubit.getInstance().height.toString(),
                       style: const TextStyle(
                           color: Colors.white,
                           fontSize: 25,
@@ -55,9 +54,9 @@ class SelectHeightView extends StatelessWidget {
                     overlayShape: RoundSliderOverlayShape(overlayRadius: 30.0),
                   ),
                   child: Slider(
-                    value: cubit.height.toDouble(),
+                    value: AppCubit.getInstance().height.toDouble(),
                     onChanged: (value) {
-                      cubit.changeSlider(value);
+                      AppCubit.getInstance().changeSlider(value);
                     },
                     min: 50,
                     max: 200,

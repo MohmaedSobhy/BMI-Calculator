@@ -9,7 +9,6 @@ class SelectAgeWeightView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var cubit = AppCubit.get(context);
     return BlocBuilder<AppCubit, AppState>(
       builder: (context, state) {
         return Padding(
@@ -19,12 +18,12 @@ class SelectAgeWeightView extends StatelessWidget {
               Expanded(
                 child: CustomeCard(
                   label: "WEIGHT",
-                  txtDigite: cubit.weight.toString(),
+                  txtDigite: AppCubit.getInstance().weight.toString(),
                   tapIncrease: () {
-                    cubit.increaseWeight();
+                    AppCubit.getInstance().increaseWeight();
                   },
                   tapDecrease: () {
-                    cubit.decreaseWeight();
+                    AppCubit.getInstance().decreaseWeight();
                   },
                 ),
               ),
@@ -34,12 +33,12 @@ class SelectAgeWeightView extends StatelessWidget {
               Expanded(
                 child: CustomeCard(
                   label: "AGE",
-                  txtDigite: cubit.age.toString(),
+                  txtDigite: AppCubit.getInstance().age.toString(),
                   tapIncrease: () {
-                    cubit.increaseAge();
+                    AppCubit.getInstance().increaseAge();
                   },
                   tapDecrease: () {
-                    cubit.decreaseAge();
+                    AppCubit.getInstance().decreaseAge();
                   },
                 ),
               ),

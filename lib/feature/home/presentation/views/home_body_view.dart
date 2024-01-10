@@ -15,7 +15,6 @@ class HomeBodyView extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<AppCubit, AppState>(
       builder: (context, state) {
-        var cubit = AppCubit.get(context);
         return Column(
           children: [
             const Expanded(
@@ -29,7 +28,7 @@ class HomeBodyView extends StatelessWidget {
             ),
             CustomButton(
               onTap: () {
-                cubit.getCalculationResult();
+                AppCubit.getInstance().getCalculationResult();
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return const ResultScreen();
                 }));

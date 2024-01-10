@@ -3,7 +3,9 @@ import 'package:bmi_calculator/feature/home/presentation/controller/app_state.da
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AppCubit extends Cubit<AppState> {
-  AppCubit() : super(AppInitial());
+  AppCubit._privateConstructor() : super(AppInitial());
+
+  static AppCubit? appcubit;
 
   bool isMale = true;
   int height = 100;
@@ -14,8 +16,9 @@ class AppCubit extends Cubit<AppState> {
   String resultText = "What time is it?";
   String interpretation = "What time is it?";
 
-  static AppCubit get(context) {
-    return BlocProvider.of(context);
+  static AppCubit getInstance() {
+    appcubit ??= AppCubit._privateConstructor();
+    return appcubit!;
   }
 
   void getCalculationResult() {
